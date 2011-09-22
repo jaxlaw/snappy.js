@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script type="text/javascript" src="../main/snappy.js"></script>
+    <script type="text/javascript">
+        var source = new ArrayBuffer(65535);
+        var dest = new ArrayBuffer(Snappy.estimatedMaxCompressedLength(source.byteLength));
+
+        Snappy.writeUncompressedLength(new Uint8Array(dest), 0, source.byteLength);
+
+        var i = Snappy.readUncompressedLength(dest, 0);
+
+        console.log(JSON.stringify(i));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
