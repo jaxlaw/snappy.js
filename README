@@ -1,0 +1,1 @@
+I kind of need a pure javascript library for compressing/decompressing raw ArrayBuffer, couldn't find one out there... so I'm going to port Dain's java snappy to js
